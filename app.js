@@ -16,7 +16,7 @@ if(!process.env.PORT){
  PORT = 5455;
 }
 else{
-   port = process.env.PORT
+   PORT = process.env.PORT
 }
  //route for the index page
  app.get('/', (req, res)=>{
