@@ -47,4 +47,14 @@ router.get("/", (req, res) => {
 
 });
 
+// new Survey router
+router.get("/newsurvey", (req, res) => {
+  res.render("newsurvey", { msg: "Home Ownership survey"});
+
+  for(let i=0;i<samplesurveys.length;i++){
+    console.log("i"+i+" name :"+samplesurveys[i]['name']);
+  }
+
+});
+
 module.exports = router;
