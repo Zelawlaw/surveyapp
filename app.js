@@ -1,6 +1,8 @@
 //imports
-const express = require('express');
 
+const express = require('express');
+const router = require('./routes/index');
+const  dbConnect  = require('./config/database');
 
 const app = express();
 
@@ -8,6 +10,12 @@ const app = express();
 // Set a static folder
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
+
+//db connection
+dbConnect();
+
+//import route
+app.use('/',router);
 
 
 let PORT= null;
