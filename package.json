@@ -1,18 +1,30 @@
 {
   "name": "ls",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "mongodb": "^4.13.0",
+    "mongodb": "^4.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zelawlaw/surveyapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zelawlaw/surveyapp/issues"
+  },
+  "homepage": "https://github.com/Zelawlaw/surveyapp#readme",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
     "nodemon": "^2.0.20"
   }
 }

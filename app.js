@@ -6,8 +6,8 @@ const app = express();
 
 
 // Set a static folder
-app.use(express.static('public'));
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 
 let PORT= null;
