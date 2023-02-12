@@ -1,4 +1,5 @@
 const express = require("express");
+const Survey = require("../models/survey");
 const router = express.Router();
 
 const samplesurveys = [
@@ -50,20 +51,66 @@ const samplesurveys = [
 
 // Home page router
 router.get("/", (req, res) => {
- 
-  res.render("home", { msg: "Summary of Surveys" ,samplesurveys: samplesurveys});
-
-  for(let i=0;i<samplesurveys.length;i++){
-    console.log("i"+i+" name :"+samplesurveys[i]['name']);
+ Survey.find({}, (error, samplesurveys)=>{
+  if (error){
+      console.log(error);
+  }else{
+     console.log('samplesurveys :'+samplesurveys);
+     res.render("home", { msg: "Summary of Surveys" ,samplesurveys: samplesurveys});
   }
+});
+ 
+
+  // for(let i=0;i<samplesurveys.length;i++){
+  //   console.log("i"+i+" name :"+samplesurveys[i]['name']);
+  // }
 
 });
 
 // new Survey router
 router.get("/newsurvey", (req, res) => {
-  res.render("newsurvey", { msg: "Home Ownership survey"});
-
+  res.render("newsurvey", { msg: "Kindly enter the info below:"});
  
+});
+
+router.get("/details/:id", (req, res) => {
+    
+ Survey.findById(req.params.id, (error, survey)=>{
+    if (error){
+        console.log(error)
+    }else{
+        console.log(survey)
+        res.render('surveydetails', {survey:survey})
+    }
+})
+  
+ 
+});
+
+router.post('/upload',(req,resp)=>{
+  
+  console.log("request :"+JSON.stringify(req.body));
+  console.log("req.body.survey.name :"+req.body.survey.name);
+ console.log("response :"+resp);
+  //   Create a new Survey
+     let newSurvey = new Survey({
+      name: req.body.survey.name,
+      surveyname:'Home Survey',
+      surveydate: 'somedate',
+      phoneNumber: +req.body.survey.phonenumber,
+      gender: req.body.survey.gender,
+      birthday: req.body.survey.birthday,
+      employmentStatus: req.body.survey.employmentstatus,
+      networth: req.body.survey.networth,
+      do_you_own_a_home: req.body.survey.iownhome,
+   })
+
+
+  newSurvey.save() 
+  resp.render("newsurvey", { msg: "Survey Saved!Home Ownership survey"});
+
+  
+
 });
 
 module.exports = router;
