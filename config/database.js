@@ -7,10 +7,11 @@ module.exports = function (){
 let dbName = process.env.dbName;
 let db_user = process.env.db_user;
 let db_pass = process.env.db_pass;
-let db_remainderUrl = process.env.db_remainder;
+// let db_remainderUrl = process.env.db_remainder;
 //'@cluster0.mllbuuk.mongodb.net/'
 //let mongodb_url='mongodb+srv://'+db_user+':'+db_pass+db_remainderUrl;
-let mongodb_url='mongodb+srv://'+db_user+':'+db_pass+'@cluster0.mllbuuk.mongodb.net/';
+let mongodb_url='mongodb+srv://'+db_user+':'+db_pass+'@weeklyips.bq5vfv0.mongodb.net/';
+// mongodb+srv://<username>:<password>@weeklyips.bq5vfv0.mongodb.net/test
 console.log(mongodb_url);
 let options = {
    maxPoolSize:10,
@@ -25,7 +26,7 @@ db.once('open', ()=>{
    console.log('Database connected successfully')
 })
 
-// Check for DB Errors
+// Check for DB Errorsy
 db.on('error', (error)=>{
    console.log(error);
 })

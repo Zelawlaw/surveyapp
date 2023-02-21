@@ -1,49 +1,46 @@
 <head>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+  />
+  <link href="/css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  
-
-<h3> Survey ID <%= survey._id%> </h3>
-<div class="container">
- 
-  <div class="form-group">
-    <label for="name">Survey Name</label>
-    <label class="form-control"> <%= survey.surveyname%></label>
-    </div>
-    <div class="form-group">
-      <label for="name">Survey Date</label>
-      <label class="form-control"> <%= survey.surveydate%></label>
-      </div>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <label class="form-control"> <%= survey.name%></label>
-        </div>
-        <div class="form-group">
-          <label for="name">Phone Number</label>
-          <label class="form-control"> <%= survey.phoneNumber%></label>
-          </div>
-          <div class="form-group">
-            <label for="name">Birth Day</label>
-            <label class="form-control"> <%= survey.birthday%></label>
-            </div>
-            <div class="form-group">
-              <label for="name">Gender</label>
-              <label class="form-control"> <%= survey.gender%></label>
-              </div>
-              <div class="form-group">
-                <label for="name">Employment Status</label>
-                <label class="form-control"> <%= survey.employmentStatus%></label>
-                </div>
-                <div class="form-group">
-                  <label for="name">Net Worth</label>
-                  <label class="form-control"> <%= survey.networth%></label>
-                  </div>
-                <div class="form-group">
-                  <label for="name">Own home?</label>
-                  <label class="form-control"> <%= survey.do_you_own_a_home%></label>
-                  </div>
-     
-</div>
+  <div id="survey-heading">
+    <!-- style="margin: 10px 10px 10px 10px" -->
+    <h2>Detailed View of Survey Records</h2>
+    <h3>Survey ID : <%= survey._id%></h3>
+    <!-- <pre><%= survey%></pre> -->
+  </div>
+  <div id="survey-details">
+    <!-- style="margin: 30px 40px 10px 30px" -->
+    <p>Survey Name : <%= survey.surveyname %></p>
+    <p>Date of Survey : <%= survey.surveyDate%></p>
+    <p>First Name : <%= survey.firstName %></p>
+    <p>Surname : <%= survey.surname %></p>
+    <p>Phone Number : <%= survey.phoneNumber %></p>
+    <p>Gender : <%= survey.gender %></p>
+    <p>Birthday : <%= survey.birthday %></p>
+    <p>Employment Status : <%= survey.employmentStatus %></p>
+    <p>Networth : <%= survey.networth %></p>
+    <p>
+      Do you own a home ? : <%= survey.do_you_own_a_home %>
+      <!-- <script>
+    // const parsedData = JSON.parse("<%-survey %>");
+    const parsedData = JSON.parse("<%-survey %>");
+    console.log(parsedData);
+    console.log(surveyname);
+    document.getElementById("surveyname").innerHTML = survey.surveyname;
+    document.getElementById("surveydate").textContent = parsedData.surveydate;
+    document.getElementById("name").textContent = parsedData.name;
+    document.getElementById("phoneNumber").textContent = parsedData.phoneNumber;
+    document.getElementById("gender").textContent = parsedData.gender;
+    document.getElementById("employmentStatus").textContent = parsedData.employmentStatus;
+    document.getElementById("networth").textContent = parsedData.networth;
+    document.getElementById("do_you_own_a_home").textContent =parsedData.do_you_own_a_home;
+      </script> -->
+    </p>
+  </div>
 </body>
