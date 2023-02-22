@@ -14,8 +14,17 @@ app.set('view engine', 'ejs');
 //db connection
 dbConnect();
 
+// Parse URL-encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded({
+   extended: true
+ }));
+
+// Parse JSON bodies (as sent by API clients)
+app.use(express.json());
+
 //import route
 app.use('/',router);
+
 
 
 let PORT= null;
