@@ -4,7 +4,6 @@ Home OwnerShip Survey Application
 
 #### This project is a Home OwnerShip Survey Application, Version Date: 23rd February 2023
 
-#### By **Lawrence Karani** **Christopher Okeyo** **Reuben Ngururu** **Hellen Waweru**
 
 ## Project Description
 
@@ -53,6 +52,12 @@ If you need any assistance on any issues or have questions, ideas or concerns. K
 ## Github URL Link
 
 To view project click :  https://github.com/Zelawlaw/surveyapp.git
+
+## Project team members
+-Lawrence Karani
+-Christopher Okeyo
+-Reuben Ngururu
+-Hellen Waweru
 
 ### License
 
