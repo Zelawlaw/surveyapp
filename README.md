@@ -8,21 +8,26 @@ Home OwnerShip Survey Application
 
 ## Project Description
 
-We are an online company specializing in constructing, and presenting the findings of online surveys.
-We have a group of qualified professionals who work hard to deliver on our promise to our customers.
+We are an online company specializing in constructing, and presenting the findings of Home Ownership online surveys.
+We are a group of qualified professionals who work hard to deliver on our promise to our customers.
 
 ## Setup/Installation Requirements
 
 - Log page URL
 - Fill in your details on the form provided
-- submit form
+- Submit form
 
 ## BDD
 
--See a hope page introducing Delani Studio.
--Scroll throug to see their portifolio.
--Allows user to interact with page by submiiting their concerns.
--See their contact details.
+-Enter your First Name
+-Enter you Surname
+-Enter your Phone Number
+-Enter Date of Birth
+-Enter Gender
+-Enter Employment Status
+-Enter Net Worth
+-Select YES/NO answer to "Do you own a home?' question
+-Click Submit
 
 
 ## Known Bugs
