@@ -10,7 +10,7 @@ let db_pass = process.env.db_pass;
 // let db_remainderUrl = process.env.db_remainder;
 //'@cluster0.mllbuuk.mongodb.net/'
 //let mongodb_url='mongodb+srv://'+db_user+':'+db_pass+db_remainderUrl;
-let mongodb_url='mongodb+srv://'+db_user+':'+db_pass+'@weeklyips.bq5vfv0.mongodb.net/';
+let mongodb_url='mongodb+srv://'+db_user+':'+db_pass+'@home-ownership.m1m5aex.mongodb.net/';
 // mongodb+srv://<username>:<password>@weeklyips.bq5vfv0.mongodb.net/test
 console.log(mongodb_url);
 let options = {
@@ -31,4 +31,5 @@ db.on('error', (error)=>{
    console.log(error);
 })
 }
+
 
